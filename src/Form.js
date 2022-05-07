@@ -6,6 +6,7 @@ import {useState} from "react";
 const FormRegister =() => {
     // como podemos capturar el valor de un input
     const [nombre,setNombre] = useState("");
+    const [apellido, setApellido] = useState("");
 
     // en react la forma en la cual obtenemos el valor de un input
     // es usando el onChange este evento nos va a permitir capturar el valor
@@ -23,14 +24,18 @@ const FormRegister =() => {
     const handleInputName = (e) =>{
         // que debemos hacwer para poder darle el valor nombre? d
         // recordemos que el valor va dentro de los ()
-    setNombre(e.target.value);
+    setNombre (e.target.value);
 };
+    const handleInputLastName = (e) => {
+        setApellido (e.target.value);
+
+    };
 
     return(
         <div>
             <form action="">
                 <h4>Formulario de registro</h4>
-                <h4>Nombre {nombre}</h4>
+                <h4>Nombre {nombre} {apellido}</h4>
                 <p>
                     {/* Al ser un input se sobre entiende que el valor que se envia es event
                     por ende no hace falta un parametro*/}
@@ -40,7 +45,10 @@ const FormRegister =() => {
                         placeholder="Ingrese su Nombre">
                     </input></p>
                     <p>
+
                     <input 
+                        type="text" 
+                        onChange={handleInputLastName} 
                         placeholder="Ingrese su Apellido">
                     </input></p>
                 <p><input type="email" placeholder="Ingrese su email"></input></p>

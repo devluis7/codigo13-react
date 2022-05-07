@@ -2,7 +2,8 @@
 import {useState} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import FormRegister from "./Form"
+import FormRegister from "./Form";
+import FormUser from "./FormUser";
 
 
 const PrimerComponente = () => {
@@ -66,7 +67,8 @@ const PrimerComponente = () => {
         <button onClick={() => parametros(10,20)}>Restar</button> 
       </div>
       <hr />
-        <FormRegister />
+      {/*<FormRegister /> */}  
+      <FormUser />
       <Footer />
       </div>
   );
