@@ -51,20 +51,22 @@ const PrimerComponente = () => {
 
       <Header />
 
-      <h1>Hola mundo</h1>
+        {/*<h1>Hola mundo</h1>*/}
       <div>
+        {/*
         <h4>Hola desde el componente {count}</h4>
         <h5>Empezo lo bueno</h5>
-        {/* vamos a crear dos botones, uno para poder sumarle 1 a count y otro para restarle */}
-
+         vamos a crear dos botones, uno para poder sumarle 1 a count y otro para restarle */}
+        {/* 
         <button onClick={sumar}>Sumar</button>
         <button onClick={restar}>Restar</button>
-
+        */}
         {/*Si queremos usar parentesis al momento de llamar a una función debemos primero
         ejecutarla como un callback */}
-        {/*Ademas es la forma en el caso nustro reciba algun parametro */}
+        {/*Ademas es la forma en el caso nustro reciba algun parametro 
 
         <button onClick={() => parametros(10,20)}>Restar</button> 
+        */}
       </div>
       <hr />
       {/*<FormRegister /> */}  
