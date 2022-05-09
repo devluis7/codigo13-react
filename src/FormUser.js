@@ -37,16 +37,15 @@ const FormUser = () => {
         setValorInputs({
             ...valorDeInputs,
             [name]: value,
-
         });
-        
-
-    }
+    };
 
     return (
         <div>
             <form action="">
-                <h4>Formulario de Usuario</h4>
+                {/*En react la forma en la cual damos una clase es usando el ClassName 
+                */}
+                <h4 className="title">Formulario de Usuario</h4>
                 <h5>Nombre {valorDeInputs.nombre}</h5>
                 <h5>apellido {valorDeInputs.apellido}</h5>
                 <h5>correo {valorDeInputs.correo}</h5>
