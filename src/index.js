@@ -9,7 +9,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 //Para poder importar un componente debo de llamarlo por el nombre que fue exportado
-import PrimerComponente from './App';
+//import PrimerComponente from './App';
 import Home from "./pages/home";
 
 
