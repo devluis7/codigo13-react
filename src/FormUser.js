@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Buttton, Form } from "react-bootstrap";
+import { TextFields,Button } from "@mui/icons-material";
 
 
 const FormUser = () => {
@@ -9,7 +9,7 @@ const FormUser = () => {
     // de los inputs
 
     // ahora debemos crear una variable que tenga por default un objeto con los 
-    // keys(name's) pero que los values esten vacios
+    // keys(name's) pero que los values esten vacios 
 
     const [valorDeInputs,setValorInputs] = useState(
         {
@@ -52,7 +52,7 @@ const FormUser = () => {
                 <h5>correo {valorDeInputs.correo}</h5>
                 <h5>password {valorDeInputs.password}</h5>
                 <p>
-                    <Form.Control 
+                    <TextFields
                         type="text"
                         onChange={handleInputValues}                     
                         name = "nombre"
@@ -60,7 +60,7 @@ const FormUser = () => {
                     />
                 </p>
                     <p>
-                        <Form.Control  
+                        <TextFields 
                             type="text" 
                             onChange={handleInputValues}     
                             name = "apellido"
@@ -68,7 +68,7 @@ const FormUser = () => {
                         />
                     </p>
                 <p>
-                    <Form.Control   
+                    <TextFields  
                         type="email" 
                         onChange={handleInputValues}     
                         name = "correo" 
@@ -76,7 +76,7 @@ const FormUser = () => {
                     />
                 </p>
                 <p>
-                    <Form.Control  
+                    <TextFields
                         type="password"  
                         onChange={handleInputValues}     
                         name = "password" 
@@ -84,7 +84,7 @@ const FormUser = () => {
                     />
                 </p>
                 <p>
-                    <button variant="primary" type="submit">
+                    <button variant="contained" color="primary" type="submit">
                         Registrar
                     </button>
                 </p>
