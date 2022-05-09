@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { TextFields,Button } from "@mui/icons-material";
+import { TextField, Button } from "@mui/material";
 
 
 const FormUser = () => {
@@ -43,52 +43,53 @@ const FormUser = () => {
 
     return (
         <div>
-            <Form action="">
-                {/*En react la forma en la cual damos una clase es usando el ClassName 
-                */}
+            <form action="">
+                {/*En react la forma en la cual damos una clase es usando el ClassName */}
                 <h4 className="title">Formulario de Usuario</h4>
                 <h5>Nombre {valorDeInputs.nombre}</h5>
                 <h5>apellido {valorDeInputs.apellido}</h5>
                 <h5>correo {valorDeInputs.correo}</h5>
                 <h5>password {valorDeInputs.password}</h5>
                 <p>
-                    <TextFields
+                    <TextField
+                        error= {false}
                         type="text"
                         onChange={handleInputValues}                     
                         name = "nombre"
-                        placeholder="Ingrese su Nombre"
+                        variant="outlined"
+                        label="Ingrese su Nombre"
                     />
                 </p>
-                    <p>
-                        <TextFields 
-                            type="text" 
-                            onChange={handleInputValues}     
-                            name = "apellido"
-                            placeholder="Ingrese su Apellido"
-                        />
-                    </p>
                 <p>
-                    <TextFields  
+                    <TextField 
+                        type="text" 
+                        onChange={handleInputValues}     
+                        name = "apellido"
+                        label="Ingrese su Apellido"
+                    />
+                </p>
+                <p>
+                    <TextField  
                         type="email" 
                         onChange={handleInputValues}     
                         name = "correo" 
-                        placeholder="Ingrese su email"
+                        label="Ingrese su email"
                     />
                 </p>
                 <p>
-                    <TextFields
+                    <TextField
                         type="password"  
                         onChange={handleInputValues}     
                         name = "password" 
-                        placeholder="Ingrese su password"
+                        label="Ingrese su password"
                     />
                 </p>
                 <p>
-                    <button variant="contained" color="primary" type="submit">
+                    <Button variant="contained" color="primary" type="submit">
                         Registrar
-                    </button>
+                    </Button>
                 </p>
-            </Form>
+            </form>
         </div>
 
     );
