@@ -62,13 +62,31 @@ const FormUser = () => {
                     <p>
                         <input 
                             type="text" 
+                            onChange={handleInputValues}     
                             name = "apellido"
                             placeholder="Ingrese su Apellido"
                         />
                     </p>
-                <p><input type="email" name = "correo" placeholder="Ingrese su email"/></p>
-                <p><input type="password"  name = "password" placeholder="Ingrese su password"/></p>
-                <p><button type="submit">Registrar</button></p>
+                <p>
+                    <input 
+                        type="email" 
+                        onChange={handleInputValues}     
+                        name = "correo" 
+                        placeholder="Ingrese su email"
+                    />
+                </p>
+                <p>
+                    <input 
+                        type="password"  
+                        onChange={handleInputValues}     
+                        name = "password" 
+                        placeholder="Ingrese su password"
+                    />
+                </p>
+                <p>
+                    <button type="submit">Registrar
+                    </button>
+                </p>
             </form>
         </div>
 
