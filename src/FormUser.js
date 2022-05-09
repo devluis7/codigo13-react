@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Buttton, Form } from "react-bootstrap";
 
 
 const FormUser = () => {
@@ -42,7 +43,7 @@ const FormUser = () => {
 
     return (
         <div>
-            <form action="">
+            <Form action="">
                 {/*En react la forma en la cual damos una clase es usando el ClassName 
                 */}
                 <h4 className="title">Formulario de Usuario</h4>
@@ -51,7 +52,7 @@ const FormUser = () => {
                 <h5>correo {valorDeInputs.correo}</h5>
                 <h5>password {valorDeInputs.password}</h5>
                 <p>
-                    <input 
+                    <Form.Control 
                         type="text"
                         onChange={handleInputValues}                     
                         name = "nombre"
@@ -59,7 +60,7 @@ const FormUser = () => {
                     />
                 </p>
                     <p>
-                        <input 
+                        <Form.Control  
                             type="text" 
                             onChange={handleInputValues}     
                             name = "apellido"
@@ -67,7 +68,7 @@ const FormUser = () => {
                         />
                     </p>
                 <p>
-                    <input 
+                    <Form.Control   
                         type="email" 
                         onChange={handleInputValues}     
                         name = "correo" 
@@ -75,7 +76,7 @@ const FormUser = () => {
                     />
                 </p>
                 <p>
-                    <input 
+                    <Form.Control  
                         type="password"  
                         onChange={handleInputValues}     
                         name = "password" 
@@ -83,10 +84,11 @@ const FormUser = () => {
                     />
                 </p>
                 <p>
-                    <button type="submit">Registrar
+                    <button variant="primary" type="submit">
+                        Registrar
                     </button>
                 </p>
-            </form>
+            </Form>
         </div>
 
     );
