@@ -65,6 +65,7 @@ const FormUser = () => {
                         type="text" 
                         onChange={handleInputValues}     
                         name = "apellido"
+                        variant = "filled"
                         label="Ingrese su Apellido"
                     />
                 </p>
@@ -72,6 +73,7 @@ const FormUser = () => {
                     <TextField  
                         type="email" 
                         onChange={handleInputValues}     
+                        variant = "standard"
                         name = "correo" 
                         label="Ingrese su email"
                     />
