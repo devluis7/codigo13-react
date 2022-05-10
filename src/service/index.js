@@ -30,6 +30,8 @@ export const getDataFromPokemon = async (url = BASE_URL) =>{
     }
 };
 
-export const storePokemon = async() => {};
+//export const storePokemon = async() => {};
+//export const updatePokemon = async() => {};
+//export const deletePokemon = async() => {};
 
 //export {getDataFromPokemon};
