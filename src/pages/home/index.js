@@ -1,6 +1,6 @@
 // En material existe un tag llamado container
 import { useEffect, useState} from "react";
-import { Container, Card, CardContent, CardMedia } from "@mui/material";
+import { Container, Card, CardContent, CardMedia, Grid } from "@mui/material";
 import { getDataFromPokemon } from "../../service";
 // vamos a ver como podemos ejecutar la función que se encarga de traer a los
 // pokemones
@@ -57,20 +57,25 @@ const Home = () => {
             ) : (
             <h4>No hay datos</h4>
             )} */}
-  
-            {pokemons.length > 0 &&
+            
+            <Grid container spacing={3} >
+                {pokemons.length > 0 &&
                 pokemons.map((pokemon,index) => (
-                // aca el codigo visual
-               <Card sx={{ width:300 }}>
-                   <CardMedia 
-                    component="img" 
-                    image={`${imgUrl}${index + 1}.svg`} 
-                />
-                   <CardContent>
-                       <h3>{pokemon.name}</h3>
-                   </CardContent>
-               </Card>
-            ))}
+                    // aca el codigo visual
+                    
+                    <Grid item md = {6} lg= {4} sm = {12} xs = {12}>
+                        <Card sx={{ width:300 }}>
+                            <CardMedia 
+                                component="img" 
+                                image={`${imgUrl}${index + 1}.svg`} 
+                            />
+                            <CardContent>
+                                <h3>{pokemon.name}</h3>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                 ))}
+            </Grid>
       </Container>
     );
 };
